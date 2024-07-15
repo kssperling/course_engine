@@ -1,7 +1,6 @@
 ﻿using System;
 using MyEngine.Ecs;
 using MyEngine.Gui;
-using Leopotam.EcsLite;
 
 
 namespace MyEngine
