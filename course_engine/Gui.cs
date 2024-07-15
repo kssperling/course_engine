@@ -11,6 +11,13 @@ namespace MyEngine
         public class MyGui
         {
             /// <summary>
+            /// пустой конструктор
+            /// </summary>
+            public MyGui()
+            {
+
+            }
+            /// <summary>
             /// метод запуска таймера?
             /// </summary>
             public async void Run()

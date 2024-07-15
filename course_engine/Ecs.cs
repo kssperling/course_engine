@@ -15,6 +15,13 @@ namespace MyEngine
         public class MyEcs
         {
             /// <summary>
+            /// пустой конструктор
+            /// </summary>
+            public MyEcs()
+            {
+
+            }
+            /// <summary>
             /// метод обновления данных
             /// </summary>
             public async void Update()
