@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyEngine.Ecs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,22 @@ namespace MyEngine
             /// пустой конструктор
             /// </summary>
             public MyGui()
+            {
+
+            }
+
+            /// <summary>
+            /// пустой конструктор
+            /// </summary>
+            public MyGui(MyEcs ecs)
+            {
+
+            }
+
+            /// <summary>
+            /// метод обновления данных
+            /// </summary>
+            public async void Update()
             {
 
             }

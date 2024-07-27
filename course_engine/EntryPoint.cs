@@ -14,18 +14,33 @@ namespace MyEngine
         /// главна функция программы
         /// </summary>
         /// <returns>таймер является асинхронным, поэтому возварщаемый тип Task</returns>
-        static async Task Main()
+        //static async Task Main()
+        //{
+        //    MyEcs ecs = new MyEcs();
+        //    MyGui gui = new MyGui();
+
+        //    gui.Run();
+
+        //    var timer = new PeriodicTimer(TimeSpan.FromMilliseconds(100));
+
+        //    while (await timer.WaitForNextTickAsync())
+        //    {
+        //        ecs.Update();
+        //    }
+        //}
+        static async Task Main(string[] args)
         {
+            Console.WriteLine("Hello World!");
+
             MyEcs ecs = new MyEcs();
-            MyGui gui = new MyGui();
+            MyGui gui = new MyGui(ecs);
 
-            gui.Run();
-
-            var timer = new PeriodicTimer(TimeSpan.FromMilliseconds(100));
+            PeriodicTimer timer = new PeriodicTimer(TimeSpan.FromMilliseconds(100));
 
             while (await timer.WaitForNextTickAsync())
             {
                 ecs.Update();
+                gui.Update();
             }
         }
     }
